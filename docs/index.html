@@ -14,5 +14,84 @@
         <dt>Equipe</dt>
         <dd>Professor Joao Cunha</dd>
     </dl>
+
+    <div>
+        <form action="https://webhook.site/29fd8c53-1751-4b31-ab3c-7d9d4f2ffa05" method="post">
+            <fieldset>
+                <legend>Busca Web</legend>
+                <p>
+                    <label for="campo_busca">Busca:</label>
+                    <abbr>*</abbr>
+                    <input tabindex="1" type="search" name="q" id="campo_busca" placeholder="Insira sua busca aqui...." required value="web">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+                <label>Estado:</label>
+                <select tabindex="4" name="estado">
+                    <optgroup label="Sudest">
+                        <option value="sp">São Paulo</option>
+                        <option value="mg">Minas Gerais</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="pr">Paraná</option>
+                    </optgroup>
+                    <optgroup label="Centro Oeste">
+                        <option value="mt">Mato Grosso</option>
+                    </optgroup>
+                </select>
+                <p>
+                    <label>Tipo Residência</label>
+                    <br>
+                    <input type="radio" id="campo_casa" name="tipo_residencia" value="casa">
+                    <label for="campo_casa">Casa</label>
+                    <br>
+                    <input type="radio" id="campo_apto" name="tipo_residencia" value="apartamento">
+                    <label for="campo_apto">Apartamento</label>
+                </p>
+                <p>
+                    <label>Características Imóvel</label>
+                    <br>
+                    <input type="checkbox" id="campo_garagem" name="caracteristica" value="garagem">
+                    <label for="campo_garagem">Garagem</label>
+                    <br>
+                    <input type="checkbox" id="campo_vigilancia" name="caracteristica" value="vigilancia">
+                    <label for="campo_vigilancia">Vigilância 24 horas</label>
+                    <br>
+                    <input type="checkbox" id="campo_cerca" name="caracteristica" value="cerca">
+                    <label for="campo_cerca">Cerca Elétrica</label>
+                </p>
+                <p>
+                    <label>Anos de Construção</label>
+                    <input type="number" min="0" max="20" name="anos_construcao">
+                </p>
+                <p>
+                    <label>CEP da Residência</label>
+                    <input tabindex="2" type="text" name="cep" pattern="\d{2}.\d{3}-\d{3}" placeholder="11.111-111">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Sobre</legend>
+                <p>
+                    <label>Fale sobre você</label>
+                    <br>
+                    <textarea name="sobre" rows="3" cols="30" maxlength="500"></textarea>
+                </p>
+                <p>
+                    <label for="campo_data_nasc">Data Nascimento</label>
+                    <input type="date" id="campo_data_nasc" name="data_nasc">
+                </p>
+                <p>
+                    <label for="campo_cor">Cor Preferida:</label>
+                    <input type="color" name="cor_preferida" id="campo_cor">
+                </p>
+            </fieldset>
+
+            <Button type="submit" formmethod="get">Realizar Busca GET</Button>
+            <Button tabindex="3" type="submit" formmethod="post">Realizar Busca POST</Button>
+        </form>
+        
+    </div>
+
 </body>
 </html>
